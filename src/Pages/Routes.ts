@@ -2,6 +2,7 @@
 import { Home } from './Home/Ogranoids/home'
 import { User } from './User/Ogranoids/user'
 import { Search } from './Search/Ogranoids/search'
+import { Premium } from './Premium/Ogranoids/premium'
 
 
 // export interface IRoute {
@@ -25,5 +26,10 @@ export const Pages = [
         link: '/search',
         title: 'Search',
         component: Search,
+    },
+    {
+        link: '/Premium',
+        title: 'Premium',
+        component: Premium,
     },
 ]
