@@ -3,18 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = (env) => {
     const modules = {
-        rules: [
-            {
-                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-                type: 'asset/resource',
-                // options: {
-                //     name: '[path][name].[ext]',
-                // }
-            },
-           
-            
-          ],
         
+          
         js: {
             test: /\.ts(x?)$/,
             exclude: /node_modules/,
@@ -61,7 +51,21 @@ module.exports = (env) => {
                     }
                 },
             ],
-        }
+        },
+        rules: 
+             {
+                test: /\.(png|jpe?g|gif|svg)$/,
+                use: [
+                  {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]",
+                        outputPath: "assets/picture/",
+                    },
+                  },
+                ],
+              }
+             
     }
 
     if (env === 'production') {
