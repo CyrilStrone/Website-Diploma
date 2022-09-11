@@ -40,7 +40,7 @@ module.exports = (env, argv) => {
     },
     resolve: config.resolve,
     module: {
-      rules: [config.modules.js, config.modules.stylus, config.modules.rules],
+      rules: [config.modules.js, config.modules.stylus, config.modules.rules, config.modules.rulesStyle],
     },
     plugins: [
       new CleanWebpackPlugin(),

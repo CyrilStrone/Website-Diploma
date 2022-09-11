@@ -1,8 +1,9 @@
 
-import { Switch, Route ,  Link,} from "react-router-dom";
+import { Switch, Route ,} from "react-router-dom";
 
 import { Pages } from 'Pages/Routes'
 import React from 'react'
+import { Header } from "../Common/UI/Header/Organoids/Header";
 export interface IRoute {
         link: string
         title: string
@@ -11,14 +12,15 @@ export interface IRoute {
 export function App() {
     // require('./index.styl')
 
-    return( <>
-        <div className="menu">
+    return( <div className="App">
+        <Header/>      
+        {/* <div className="menu">
             {Pages.map((page:any, index:any) => <Link to={page.link} key={index}>{page.title}</Link>)}
-        </div>
+        </div> */}
         <Switch>
             {Pages.map((page:any, index:any) => <Route exact path={page.link} component={page.component}></Route>)}
         </Switch>
         
         
-    </>)
+    </div>)
 }

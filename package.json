@@ -50,6 +50,8 @@
     "webpack-notifier": "^1.15.0"
   },
   "dependencies": {
+    "effector": "^22.3.0",
+    "effector-react": "^22.1.6",
     "file-loader": "^6.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
