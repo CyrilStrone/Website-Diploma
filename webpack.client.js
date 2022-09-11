@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackNotifierPlugin = require("webpack-notifier");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpackConfig = require("./webpack.config");
 
@@ -27,7 +27,7 @@ module.exports = (env, argv) => {
   };
 
   if (isProd) {
-    optimizations.minimizer.push(new UglifyJsPlugin());
+    optimizations.minimizer.push(new TerserPlugin());
   }
 
   return {
