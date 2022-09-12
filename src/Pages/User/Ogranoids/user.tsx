@@ -5,6 +5,6 @@ export const User = () => {
 
     return (<div className="content">
         <h1>User page</h1>
-        жопа
+        Аккаунт
     </div>)
 }

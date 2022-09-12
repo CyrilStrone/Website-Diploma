@@ -1,0 +1,48 @@
+.Footer {
+  background: #222222;
+}
+.FooterGeneral {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.FooterGeneral_Logo img {
+  height: 50%;
+}
+.FooterGeneral_Navs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.FooterGeneral a {
+  font-family: "San Francisco";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-decoration: none;
+
+  color: #ffffff;
+}
+.FooterGeneral_Navs a {
+  padding-right: 10%;
+}
+.FooterGeneral_Navs a:last-child {
+  padding-right: 0%;
+}
+@media (max-width: 730px) {
+  .FooterGeneral {
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-around;
+  }
+}
+@media (orientation: portrait) {
+  .FooterGeneral {
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-around;
+  }
+}

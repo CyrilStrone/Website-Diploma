@@ -5,6 +5,7 @@ import React from "react";
 import { Header } from "../Common/UI/Header/Organoids/Header";
 import "./index.css";
 import "./font.css";
+import { Footer } from "../Common/UI/Footer/Organoids/Footer";
 export interface IRoute {
   link: string;
   title: string;
@@ -23,6 +24,7 @@ export function App() {
           ))}
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 }

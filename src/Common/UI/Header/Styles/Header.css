@@ -19,47 +19,46 @@
 .Headerlogo_Elem img {
   height: 80%;
 }
-.HeaderGeneral_Navs{
-    display: flex;
-    
-    justify-content: space-around;
-}
-.HeaderGeneral_Navs a{
-    padding-right: 10%;
-}
-.HeaderGeneral_Navs a:last-child{
-    padding-right: 0%;
-}
-.HeaderGeneral_Logo{
+.HeaderGeneral_Navs {
+  display: flex;
 
+  justify-content: flex-end;
 }
-.HeaderGeneral_Burger{
-    position: relative !important;
+.HeaderGeneral_Navs a {
+  padding-right: 10%;
 }
-.HeaderGeneral_Burger{
-    display: none;
+.HeaderGeneral_Navs a:last-child {
+  padding-right: 0%;
 }
-@media (max-width: 730px)  {
-    .HeaderGeneral {
-      padding-left: 2%;
-      padding-right: 2%;
-    }
-    .HeaderGeneral_Navs {
-        display: none;
-    }
-    .HeaderGeneral_Burger{
-        display: block;
-    }
-  }
-@media  (orientation: portrait) {
+.HeaderGeneral_Logo {
+}
+.HeaderGeneral_Burger {
+  position: relative !important;
+}
+.HeaderGeneral_Burger {
+  display: none;
+}
+@media (max-width: 730px) {
   .HeaderGeneral {
     padding-left: 2%;
     padding-right: 2%;
   }
   .HeaderGeneral_Navs {
     display: none;
-}
-.HeaderGeneral_Burger{
+  }
+  .HeaderGeneral_Burger {
     display: block;
+  }
 }
+@media (orientation: portrait) {
+  .HeaderGeneral {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .HeaderGeneral_Navs {
+    display: none;
+  }
+  .HeaderGeneral_Burger {
+    display: block;
+  }
 }
