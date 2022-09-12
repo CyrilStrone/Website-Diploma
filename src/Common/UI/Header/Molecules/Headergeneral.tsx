@@ -6,7 +6,7 @@ import { $userAuthorization } from "../../../hooks";
 import {useStore} from "effector-react";
 import ikit from '../../../Assets/Search/ikit.jpg';
 import { HeaderNav, IHeaderNav } from "../Atoms/HeaderNav";
-
+import { elastic as Menu } from 'react-burger-menu';
 
 
 
@@ -25,12 +25,25 @@ export const HeaderGeneral = () => {
    
       
         <div className={`HeaderGeneral`} >
-            {HeaderlogoArray.map((e,i)=><Headerlogo link={e.link}
-                indexlink={e.indexlink} class={e.class} img={e.img} 
-            />)}
-            {HeaderNavArray.map((e,i)=><HeaderNav link={e.link}
-                indexlink={e.indexlink} class={e.class} authorization={e.authorization} text={e.text} 
-            />)}
+             <div className={`HeaderGeneral_Logo`}>
+                {HeaderlogoArray.map((e,i)=><Headerlogo link={e.link}
+                    indexlink={e.indexlink} class={e.class} img={e.img} 
+                />)}
+             </div>
+           
+            <div className={`HeaderGeneral_Navs`}>
+                {HeaderNavArray.map((e,i)=><HeaderNav link={e.link}
+                    indexlink={e.indexlink} class={e.class} authorization={e.authorization} text={e.text} 
+                />)}
+            </div>
+            <div className={`HeaderGeneral_Burger`}>
+            <Menu  burgerButtonClassName={"HeaderGeneral_BurgerButtom"} right  pageWrapId={"page-wrap"} outerContainerId={"App"}>
+                {HeaderNavArray.map((e,i)=><HeaderNav link={e.link}
+                    indexlink={e.indexlink} class={e.class} authorization={e.authorization} text={e.text} 
+                />)}
+            </Menu>
+            </div>
+            
         </div>
   );
 };

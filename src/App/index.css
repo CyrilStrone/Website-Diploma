@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.App_Actual{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.App{
+
+ background-color: beige;
+}
+@media (orientation: portrait){
+    .App_Actual{
+        padding-left: 2%;
+        padding-right: 2%;
+       }
+}

@@ -67,6 +67,14 @@ module.exports = (env) => {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
     },
+    rulesFonts: {
+     
+      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]'
+      }
+  },
   };
 
   if (env === "production") {
