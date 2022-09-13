@@ -1,13 +1,14 @@
 .Footer {
   background: #222222;
+  display: flex;
+  justify-content: center;
 }
 .FooterGeneral {
   height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20%;
-  padding-right: 20%;
+  width: 60%;
 }
 .FooterGeneral_Logo img {
   height: 50%;
@@ -41,8 +42,8 @@
 }
 @media (orientation: portrait) {
   .FooterGeneral {
-    padding-left: 2%;
-    padding-right: 2%;
+    width: 96%;
+
     justify-content: space-around;
   }
 }

@@ -3,9 +3,7 @@
   height: 44px;
   align-items: center;
   justify-content: space-between;
-  background: #222222;
-  padding-left: 20%;
-  padding-right: 20%;
+  width: 60%;
 }
 .HeaderGeneral a {
   font-family: "San Francisco";
@@ -16,6 +14,11 @@
   opacity: .8;
   color: #ffffff;
   display: block;
+}
+.Header{
+  background: #222222;
+  display: flex;
+    justify-content: center;
 }
 .HeaderGeneral_Navs a:hover {
  
@@ -50,8 +53,7 @@
 
 @media (orientation: portrait) {
   .HeaderGeneral {
-    padding-left: 2%;
-    padding-right: 2%;
+    width: 96%;
   }
   .HeaderGeneral_Navs {
     display: none;

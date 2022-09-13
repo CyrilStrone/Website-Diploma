@@ -13,12 +13,12 @@ export interface IFooterNav {
 
 export const FooterNav = (params: IFooterNav) => {
   return (
-    <Link to={params.link} key={params.indexlink}>
-      {
-        <div className={`${params.class} FooterNav`} style={params.authorization ? {display:"none"}:{}}>
+    //style={params.authorization ? {display:"none"}:{}
+    <Link to={params.link} key={params.indexlink} className={`${params.class} FooterNav`} >
+      
           {params.text}
-        </div>
-      }
+  
+      
     </Link>
   );
 };

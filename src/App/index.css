@@ -1,24 +1,30 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
-.App_Actual{
-    padding-left: 20%;
-    padding-right: 20%;
+.App_Actual {
+  height: 100%;
+  width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-.App{
-
- background-color: beige;
+.App {
+  display: flex;
+  background-color: beige;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 100%;
 }
 @media (max-width: 730px) {
-    .App_Actual{
-        padding-left: 2%;
-        padding-right: 2%;
-    }
+  .App_Actual {
+    width: 96%;
   }
-@media (orientation: portrait){
-    .App_Actual{
-        padding-left: 2%;
-        padding-right: 2%;
-       }
+}
+@media (orientation: portrait) {
+  .App_Actual {
+    width: 96%;
+  }
 }

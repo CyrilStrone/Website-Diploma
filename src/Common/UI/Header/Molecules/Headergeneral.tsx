@@ -23,7 +23,7 @@ export const HeaderGeneral = () => {
     let HeaderNavArray:IHeaderNav[]  = [];
     
     Pages.map((page:any, index:any) => [HeaderNavArray.push({link:page.link,indexlink:index,class:"HeaderNav_Elem",authorization:userAuthorization,text:page.title})]);
-
+    console.log(HeaderNavArray)
   return (
    
       

@@ -13,7 +13,8 @@ export interface IHeaderNav {
 
 export const HeaderNav = (params: IHeaderNav) => {
   return (
-    <Link className={`${params.class} HeaderNav`} style={params.authorization ? {display:"none"}:{}} to={params.link} key={params.indexlink}>
+    //style={params.authorization ? {display:"none"}:{}
+    <Link className={`${params.class} HeaderNav`}  to={params.link} key={params.indexlink}>
       
         
           {params.text}

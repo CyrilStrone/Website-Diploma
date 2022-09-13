@@ -1,6 +1,6 @@
 
 import { Home } from './Home/Ogranoids/home'
-import { User } from './User/Ogranoids/user'
+import { User } from './User/Ogranoids/User'
 import { Search } from './Search/Ogranoids/search'
 import { Premium } from './Premium/Ogranoids/premium'
 
@@ -18,12 +18,12 @@ export const Pages = [
         component: Home,
     },
     {
-        link: '/user',
+        link: '/User',
         title: 'User',
         component: User,
     },
     {
-        link: '/search',
+        link: '/Search',
         title: 'Search',
         component: Search,
     },
