@@ -1,6 +1,6 @@
 .HeaderGeneral {
   display: flex;
-  height: 80px;
+  height: 44px;
   align-items: center;
   justify-content: space-between;
   background: #222222;
@@ -9,12 +9,21 @@
 }
 .HeaderGeneral a {
   font-family: "San Francisco";
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 12px;
   line-height: 26px;
   text-decoration: none;
-
+  opacity: .8;
   color: #ffffff;
+  display: block;
+}
+.HeaderGeneral_Navs a:hover {
+ 
+  opacity: 1;
+}
+.HeaderGeneral_Navs a:active {
+ 
+  opacity: 1;
 }
 .Headerlogo_Elem img {
   height: 80%;
@@ -38,18 +47,7 @@
 .HeaderGeneral_Burger {
   display: none;
 }
-@media (max-width: 730px) {
-  .HeaderGeneral {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  .HeaderGeneral_Navs {
-    display: none;
-  }
-  .HeaderGeneral_Burger {
-    display: block;
-  }
-}
+
 @media (orientation: portrait) {
   .HeaderGeneral {
     padding-left: 2%;
@@ -59,6 +57,7 @@
     display: none;
   }
   .HeaderGeneral_Burger {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
