@@ -4,7 +4,8 @@ import {  Headerlogo, IHeaderlogo } from "../Atoms/HeaderLogo";
 import { Pages } from '../../../../Pages/Routes'
 import { $menuBurger, $userAuthorization, setmenuBurger } from "../../../hooks";
 import {useStore} from "effector-react";
-import ikit from '../../../Assets/Search/ikit.jpg';
+// import ikit from '../../../Assets/Search/ikit.jpg';
+import logo from '../../../Assets/Logo/LogoMin.svg';
 import burgerIcon from '../../../Assets/Burger/BurgerIcon.svg';
 import BurgerIconExit from '../../../Assets/Burger/BurgerIconExit.svg';
 
@@ -17,7 +18,7 @@ export const HeaderGeneral = () => {
     const userAuthorization = useStore($userAuthorization);
     const menuBurger = useStore($menuBurger);
     const HeaderlogoArray:IHeaderlogo[]=[
-        {link:"/",indexlink:"0",class:"Headerlogo_Elem",img:ikit},
+        {link:"/",indexlink:"0",class:"Headerlogo_Elem",img:logo},
     ]
     
     let HeaderNavArray:IHeaderNav[]  = [];

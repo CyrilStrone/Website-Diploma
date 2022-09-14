@@ -4,7 +4,9 @@ import {  Footerlogo, IFooterlogo } from "../Atoms/FooterLogo";
 import { Pages } from '../../../../Pages/Routes'
 import { $userAuthorization } from "../../../hooks";
 import {useStore} from "effector-react";
-import ikit from '../../../Assets/Search/ikit.jpg';
+// import ikit from '../../../Assets/Search/ikit.jpg';
+import logo from '../../../Assets/Logo/LogoBig.svg';
+
 import { FooterNav, IFooterNav } from "../Atoms/FooterrNav";
 
 
@@ -13,7 +15,7 @@ export const FooterGeneral = () => {
     const userAuthorization = useStore($userAuthorization);
 
     const FooterlogoArray:IFooterlogo[]=[
-        {link:"/",indexlink:"0",class:"Footerlogo_Elem",img:ikit},
+        {link:"/",indexlink:"0",class:"Footerlogo_Elem",img:logo},
     ]
     
     let FooterNavArray:IFooterNav[]  = [];
