@@ -2,7 +2,7 @@ import React from "react";
 import {  Headerlogo, IHeaderlogo } from "../Atoms/HeaderLogo";
 // import {  IHeaderNav } from "../Atoms/HeaderNav";
 import { Pages } from '../../../../Pages/Routes'
-import { $userAuthorization } from "../../../hooks";
+import { $menuBurger, $userAuthorization, setmenuBurger } from "../../../hooks";
 import {useStore} from "effector-react";
 import ikit from '../../../Assets/Search/ikit.jpg';
 import burgerIcon from '../../../Assets/Burger/BurgerIcon.svg';
@@ -15,12 +15,17 @@ import { slide as Menu } from 'react-burger-menu';
 
 export const HeaderGeneral = () => {
     const userAuthorization = useStore($userAuthorization);
-
+    const menuBurger = useStore($menuBurger);
     const HeaderlogoArray:IHeaderlogo[]=[
         {link:"/",indexlink:"0",class:"Headerlogo_Elem",img:ikit},
     ]
     
     let HeaderNavArray:IHeaderNav[]  = [];
+
+    const handleIsOpen = () => {
+        setmenuBurger(!menuBurger)
+    }
+  
     
     Pages.map((page:any, index:any) => [HeaderNavArray.push({link:page.link,indexlink:index,class:"HeaderNav_Elem",authorization:userAuthorization,text:page.title})]);
     console.log(HeaderNavArray)
@@ -40,7 +45,7 @@ export const HeaderGeneral = () => {
                 />)}
             </div>
             <div className={`HeaderGeneral_Burger`}>
-            <Menu  burgerButtonClassName={"HeaderGeneral_BurgerButtom"} customBurgerIcon={ <img src={burgerIcon} /> } customCrossIcon={ <img src={BurgerIconExit} /> } right  pageWrapId={"page-wrap"} outerContainerId={"App"}>
+            <Menu onOpen={handleIsOpen} onClose={handleIsOpen} isOpen={menuBurger} burgerButtonClassName={"HeaderGeneral_BurgerButtom"} customBurgerIcon={ <img src={burgerIcon} /> } customCrossIcon={ <img src={BurgerIconExit} /> } right  pageWrapId={"page-wrap"} outerContainerId={"App"}>
                 {HeaderNavArray.map((e,i)=><HeaderNav link={e.link}
                     indexlink={e.indexlink} class={e.class} authorization={e.authorization} text={e.text} 
                 />)}

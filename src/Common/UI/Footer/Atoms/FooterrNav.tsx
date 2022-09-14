@@ -13,12 +13,34 @@ export interface IFooterNav {
 
 export const FooterNav = (params: IFooterNav) => {
   return (
-    //style={params.authorization ? {display:"none"}:{}
-    <Link to={params.link} key={params.indexlink} className={`${params.class} FooterNav`} >
-      
+    <>
+      {params.link == "/User" ? (
+        <Link
+          className={`${params.class} FooterNav`}
+          to={params.link}
+          key={params.indexlink}
+          style={params.authorization == false ? { display: "none" } : {}}
+        >
           {params.text}
-  
-      
-    </Link>
+        </Link>
+      ) : params.link == "/Login" ? (
+        <Link
+          className={`${params.class} FooterNav`}
+          to={params.link}
+          key={params.indexlink}
+          style={params.authorization == false ? {} : { display: "none" }}
+        >
+          {params.text}
+        </Link>
+      ) : (
+        <Link
+          className={`${params.class} FooterNav`}
+          to={params.link}
+          key={params.indexlink}
+        >
+          {params.text}
+        </Link>
+      )}
+    </>
   );
 };
