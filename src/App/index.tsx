@@ -13,6 +13,10 @@ export interface IRoute {
   title: string;
   component: JSX.Element;
 }
+
+import  '../Common/Assets/Logo/LogoMin.png';
+import  '../Common/Assets/Logo/LogoMin.jpg';
+
 export function App() {
   // require('./index.styl')
 
