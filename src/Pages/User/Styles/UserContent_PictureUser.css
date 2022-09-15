@@ -1,0 +1,18 @@
+.UserContentPicture_Picture img{
+    height: 100%;
+    max-width: 100%;
+    border-radius: 3%;
+    border: 1px solid #222222;
+}
+.UserContentPicture_Picture{
+    max-height: 150px;
+}
+.UserContent_PictureUser {
+    padding: 5%;
+    padding-bottom: 0%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}

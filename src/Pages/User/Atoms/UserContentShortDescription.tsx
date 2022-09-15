@@ -1,30 +1,25 @@
 import { useStore } from "effector-react";
 import React from "react";
 // import { Link } from "react-router-dom";
-import {  $userPicture } from "../../../Common/hooks";
+import {  $userShortDescription } from "../../../Common/hooks";
 
-export interface IUserContentPicture {
+export interface IUserContentShortDescription {
   id?: string;
   class?: string;
   authorization?: boolean;
   typeBlock?: string;
 }
-export const UserContentPicture = (params: IUserContentPicture) => {
-  const userPicture = useStore($userPicture);
+export const UserContentShortDescription = (params: IUserContentShortDescription) => {
+  const userShortDescription = useStore($userShortDescription);
   // let handleClick = () => {
   //   <Link to={params.link} key={params.indexlink} className={`${params.class} Footerlogo`}>
-  
+
   //   </Link>
   // };
- 
 
   return (
     <>
-     <div className="UserContentPicture_Picture">
-     <img src={userPicture} alt="Картинка" />
-
-     </div>
+      <div className="UserContent_ShortDescriptionUser_Title">{userShortDescription}</div>
     </>
-    
   );
 };

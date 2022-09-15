@@ -1,0 +1,48 @@
+.UserContent_StackesUser {
+  padding: 5%;
+  padding-bottom: 0%;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.UserContent_StackesUser_Stacke {
+  font-family: "San Francisco";
+  font-weight: 800;
+  font-size: 2vh;
+  line-height: 26px;
+  text-decoration: none;
+  color: white;
+  background-color: #222222;
+  padding: 0.4vw;
+  padding-right: 0.6vw;
+  padding-left: 0.6vw;
+  background-clip: border-box;
+  margin-right: 2vw;
+  margin-bottom: 1vw;
+  height: max-content;
+  width: max-content;
+  border-radius: 8px;
+}
+.UserContent_StackesUser_Stacke:first-child {
+    margin-left: 0vw;
+  }
+  
+  /* @media (orientation: portrait) {
+    .UserContent_StackesUser_Stacke {
+      font-family: "San Francisco";
+      font-weight: 800;
+      font-size: 2vh;
+      line-height: 26px;
+      text-decoration: none;
+      color: white;
+      background-color: #222222;
+      padding: 0.4vw;
+      
+      background-clip: border-box;
+      margin-left: 2vw;
+      height: max-content;
+      width: max-content;
+      border-radius: 8px;
+    }
+  } */
