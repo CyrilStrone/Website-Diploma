@@ -2,6 +2,7 @@ import { useStore } from "effector-react";
 import React from "react";
 import { $userAuthorization } from "../../../Common/hooks";
 import { UserContentLogout } from "../Atoms/UserContentLogout";
+import { UserContentPicture } from "../Atoms/UserContentPicture";
 // import {  IHeaderNav } from "../Atoms/HeaderNav";
 // import { Pages } from '../../Routes'
 // import { $userAuthorization } from "../../../Common/hooks";
@@ -13,7 +14,7 @@ export const User = () => {
   const userAuthorization = useStore($userAuthorization);
 
   const UserContentArray: IUserContent[] = [
-    { class: "UserContent_PictureUser" },
+    { class: "UserContent_PictureUser" ,Component:<UserContentPicture/>},
     { class: "UserContent_JobUser" },
     { class: "UserContent_StackeUser" },
     { class: "UserContent_ShortDescriptionUser" },
