@@ -39,7 +39,9 @@ export const HeaderGeneral = () => {
                     indexlink={e.indexlink} class={e.class} img={e.img} 
                 />)}
              </div>
-           
+           <div className={`HeaderGeneral_Title`}>
+                FMZFK
+           </div>
             <div className={`HeaderGeneral_Navs`}>
                 {HeaderNavArray.map((e,i)=><HeaderNav link={e.link}
                     indexlink={e.indexlink} class={e.class} authorization={e.authorization} text={e.text} 

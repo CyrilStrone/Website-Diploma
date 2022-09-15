@@ -50,8 +50,18 @@
 .HeaderGeneral_Burger {
   display: none;
 }
-
+.HeaderGeneral_Title{
+  display: none;
+}
 @media (orientation: portrait) {
+  .HeaderGeneral_Title{
+    display: block;
+    font-family: "San Francisco";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+  }
   .HeaderGeneral {
     width: 96%;
   }
