@@ -4,10 +4,6 @@ import { $userAuthorization } from "../../../Common/hooks";
 import { UserContentJobName } from "../Atoms/UserContentJobName";
 import { UserContentLogout } from "../Atoms/UserContentLogout";
 import { UserContentPicture } from "../Atoms/UserContentPicture";
-// import {  IHeaderNav } from "../Atoms/HeaderNav";
-// import { Pages } from '../../Routes'
-// import { $userAuthorization } from "../../../Common/hooks";
-// import {useStore} from "effector-react";
 import { IUserContent, UserContent } from "../Molecules/UserContent";
 import "../Styles/User.css";
 import "../Styles/UserContent_LogoutUser.css";
@@ -21,30 +17,41 @@ import { UserContentStackes } from "../Atoms/UserContentStackes";
 import { UserContentFullDescription } from "../Atoms/UserContentFullDescription";
 import { UserContentShortDescription } from "../Atoms/UserContentShortDescription";
 import { UserContentSocialNetworks } from "../Atoms/UserContentSocialNetworks";
-UserContentSocialNetworks
+UserContentSocialNetworks;
 export const User = () => {
   const userAuthorization = useStore($userAuthorization);
 
   const UserContentArray: IUserContent[] = [
-    { class: "UserContent_PictureUser" ,Component:<UserContentPicture/>},
-    { class: "UserContent_JobNameUser"  ,Component:<UserContentJobName/>},
-    { class: "UserContent_StackesUser" ,Component:<UserContentStackes/>},
-    { class: "UserContent_ShortDescriptionUser",Component:<UserContentShortDescription/> },
-    { class: "UserContent_FullDescriptionUser",Component:<UserContentFullDescription/> },
-    { class: "UserContent_SocialNetworksUser"  ,Component:<UserContentSocialNetworks/>},
-    { class: "UserContent_LogoutUser" ,Component:<UserContentLogout/>},
+    { class: "UserContent_PictureUser", Component: <UserContentPicture /> },
+    { class: "UserContent_JobNameUser", Component: <UserContentJobName /> },
+    { class: "UserContent_StackesUser", Component: <UserContentStackes /> },
+    {
+      class: "UserContent_ShortDescriptionUser",
+      Component: <UserContentShortDescription />,
+    },
+    {
+      class: "UserContent_FullDescriptionUser",
+      Component: <UserContentFullDescription />,
+    },
+    {
+      class: "UserContent_SocialNetworksUser",
+      Component: <UserContentSocialNetworks />,
+    },
+    { class: "UserContent_LogoutUser", Component: <UserContentLogout /> },
   ];
   const UserContentArrayNoAuthorization: IUserContent[] = [
-    { class: "UserContent_Authorization" ,Component:<UserContentLogout/>},
+    { class: "UserContent_Authorization", Component: <UserContentLogout /> },
   ];
 
   return (
     <div className={`User`}>
       <div className={`User_Contents`}>
         {userAuthorization
-          ? UserContentArray.map((e, i) => <UserContent class={e.class} Component={e.Component}/>)
+          ? UserContentArray.map((e, i) => (
+              <UserContent class={e.class} Component={e.Component} />
+            ))
           : UserContentArrayNoAuthorization.map((e, i) => (
-              <UserContent class={e.class} Component={e.Component}/>
+              <UserContent class={e.class} Component={e.Component} />
             ))}
       </div>
     </div>

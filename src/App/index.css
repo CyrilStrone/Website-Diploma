@@ -3,7 +3,8 @@ body {
   padding: 0;
 }
 .App_Actual {
-  /* height: 100%; */
+  padding-top: 44px;
+  height: 100%;
   width: 60%;
     display: flex;
     justify-content: center;

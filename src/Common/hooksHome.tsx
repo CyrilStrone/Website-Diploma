@@ -1,0 +1,27 @@
+import { createEvent, createStore } from "effector";
+import UserTopHomePicture from "../Common/Assets/Home/TopPictureHome.png"
+
+export const $userTopHomeName= createStore<string>("Даня Булгаков")  
+export const setuserTopHomeName = createEvent<string>()
+$userTopHomeName.on(setuserTopHomeName, (_,val)=> val);
+
+export const $userTopHomePicture = createStore<string>(UserTopHomePicture)  
+export const setuserTopHomePicture = createEvent<string>()
+$userTopHomePicture.on(setuserTopHomePicture, (_,val)=> val);
+
+export const $userTopHomeJob= createStore<string>("Front End Engineer")  
+export const setuserTopHomeJob = createEvent<string>()
+$userTopHomeJob.on(setuserTopHomeJob, (_,val)=> val);
+
+
+export const $userTopHomeSocialNetworks= createStore<string[]>(["Vk","Twitter","GitHub"])  
+export const setuserTopHomeSocialNetworks = createEvent<string[]>()
+$userTopHomeSocialNetworks.on(setuserTopHomeSocialNetworks, (_,val)=> val);
+
+export const $userTopHomeShortDescription= createStore<string>("Очень короткое описание? Ой какое короткое описание, ужасно короткое. Ну так нельзя!")  
+export const setuserTopHomeShortDescription = createEvent<string>()
+$userTopHomeShortDescription.on(setuserTopHomeShortDescription, (_,val)=> val);
+
+export const $usersPastTop= createStore<any>([{picture:UserTopHomePicture,name:"Даня Булгаков",job:"шмэкэндер"},{picture:UserTopHomePicture,name:"Николай Булгаков",job:"шмэкэндер"},{picture:UserTopHomePicture,name:"Бабушников Даня",job:"шмэкэндер"}])  
+export const setusersPastTop = createEvent<any>()
+$usersPastTop.on(setusersPastTop, (_,val)=> val);
