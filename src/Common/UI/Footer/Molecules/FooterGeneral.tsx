@@ -15,7 +15,7 @@ export const FooterGeneral = () => {
     const userAuthorization = useStore($userAuthorization);
 
     const FooterlogoArray:IFooterlogo[]=[
-        {link:"/",indexlink:"0",class:"Footerlogo_Elem",img:logo},
+        {link:"/Home",indexlink:"0",class:"Footerlogo_Elem",img:logo},
     ]
     
     let FooterNavArray:IFooterNav[]  = [];

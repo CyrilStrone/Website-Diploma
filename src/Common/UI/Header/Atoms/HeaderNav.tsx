@@ -14,7 +14,6 @@ export interface IHeaderNav {
 }
 
 export const HeaderNav = (params: IHeaderNav) => {
-  console.log("params.indexlink", params.indexlink);
   const closeSideBar = () => {
     setmenuBurger(false)
   }
@@ -40,7 +39,17 @@ export const HeaderNav = (params: IHeaderNav) => {
         >
           {params.text}
         </Link>
-      ) : (
+      ) :  params.link == "/Forgot" ? (
+        <Link
+          className={`${params.class} HeaderNav`}
+          onClick={closeSideBar}
+          to={params.link}
+          key={params.indexlink}
+          style={ {display: "none"} }
+        >
+          {params.text}
+        </Link>
+      ):(
         <Link
           className={`${params.class} HeaderNav`}
           onClick={closeSideBar}

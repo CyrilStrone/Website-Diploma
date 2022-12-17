@@ -7,25 +7,32 @@
 }
 .HeaderGeneral a {
   font-family: "San Francisco";
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 26px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
   text-decoration: none;
-  opacity: .8;
-  color: #ffffff;
-  display: block;
+  opacity: 0.8;
+  color: #000000;
+    display: block;
 }
-.Header{
-  background: #222222;
+.HeaderNav_Registration{
+  background: #7876E6;
+  border-radius: 15px;
+  color: white !important;
+  padding-left: 14px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 14px;
+
+}
+.Header {
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 .HeaderGeneral_Navs a:hover {
- 
   opacity: 1;
 }
 .HeaderGeneral_Navs a:active {
- 
   opacity: 1;
 }
 .Headerlogo_Elem img {
@@ -33,11 +40,11 @@
 }
 .HeaderGeneral_Navs {
   display: flex;
-
+  align-items: center;
   justify-content: flex-end;
 }
 .HeaderGeneral_Navs a {
-  padding-right: 10%;
+  margin-right: 10%;
 }
 .HeaderGeneral_Navs a:last-child {
   padding-right: 0%;
@@ -50,11 +57,11 @@
 .HeaderGeneral_Burger {
   display: none;
 }
-.HeaderGeneral_Title{
+.HeaderGeneral_Title {
   display: none;
 }
 @media (orientation: portrait) {
-  .HeaderGeneral_Title{
+  .HeaderGeneral_Title {
     display: block;
     font-family: "San Francisco";
     font-weight: 700;

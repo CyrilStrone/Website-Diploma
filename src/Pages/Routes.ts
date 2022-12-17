@@ -6,6 +6,7 @@ import { Premium } from './Premium/Ogranoids/premium'
 import { Login } from './Login/Organoids/Login'
 import { Forgot } from './Forgot/Organoids/Forgot'
 import { Registration } from './Registration/Organoids/Registration'
+import { Major } from './Major/Ogranoids/Major'
 
 // export interface IRoute {
 //     link: string
@@ -16,6 +17,11 @@ import { Registration } from './Registration/Organoids/Registration'
 export const Pages = [
     {
         link: '/',
+        title: 'Major',
+        component: Major,
+    },
+    {
+        link: '/Home',
         title: 'Home',
         component: Home,
     },
@@ -23,11 +29,6 @@ export const Pages = [
         link: '/User',
         title: 'User',
         component: User,
-    },
-    {
-        link: '/Login',
-        title: 'Login',
-        component: Login,
     },
     {
         link: '/Search',
@@ -42,14 +43,25 @@ export const Pages = [
 ]
 export const PagesLogin = [
     {
+        link: '/Registration',
+        title: 'Registration',
+        class:'HeaderNav_Registration',
+        component: Registration,
+    },
+    {
+        link: '/User',
+        title: 'User',
+        component: User,
+    },
+    {
         link: '/Forgot',
         title: 'Forgot',
         component: Forgot,
     },
     {
-        link: '/Registration',
-        title: 'Registration',
-        component: Registration,
-    },
+        link: '/Login',
+        title: 'Login',
+        component: Login,
+    }
     
 ]
