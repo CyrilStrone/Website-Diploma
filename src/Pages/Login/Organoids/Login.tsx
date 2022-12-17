@@ -7,6 +7,8 @@ import {
   setuserAuthorization,
 } from "../../../Common/hooks";
 import "../Styles/Login.css";
+import Picture from '../../../Common/Assets/Login/LoginPicture.png';
+
 
 // export interface ILoginArray {
 //   id?: string;
@@ -29,36 +31,44 @@ export const Login = () => {
     }
   };
 
- 
-  const soldCheckbox = () => {
-    
-    }
+  const soldCheckbox = () => {};
   return (
     <>
       <div className={`Login`}>
-      <div className="Login_Block">
-        <div className="Login_Block-Title">
-        Вход
+      <div className="Login_Picture">
+        <img src={Picture} alt="Картинка" />
         </div>
-        <div className="Login_Block-Mail">
-        <input type="email" value="Email"/>
-
+        
+        <div className="Login_Block">
+          <div className="Login_Block-Title">Вход</div>
+          <div className="Login_Block-Mail">
+            <input type="email" value="Email" />
+          </div>
+          <div className="Login_Block-Password">
+            <input type="password" value="Пароль" />
+            <Link className="Login_Block-Password_Forgot" to={"/Forgot"}>
+              Забыли?
+            </Link>
+          </div>
+          <div className="Login_Block-Check">
+            <input
+              type="checkbox"
+              className="checkbox"
+              onChange={soldCheckbox}
+            />
+            Запомнить меня
+          </div>
+          <div className="Login_Block-Login">
+            <Link to={"/User"} onClick={handleClick}>
+              Войти
+            </Link>
+          </div>
+          <div className="Login_Block-Registration">
+            У вас еще нет аккаунта?
+            <Link to={"/Registration"}>Зарегистрироваться!</Link>
+          </div>
         </div>
-        <div className="Login_Block-Password">
-          <input type="password" value="Пароль"/>
-        <Link className="Login_Block-Password_Forgot" to={"/Forgot"}>Забыли?</Link>
-
-        </div>
-        <div className="Login_Block-Check">
-        <input type="checkbox"  onChange={soldCheckbox} />
-        Запомнить меня
-        </div>
-        <Link to={"/User"}  onClick={handleClick}>Login</Link>
-        <Link to={"/Registration"}>Registration</Link>
       </div>
-      </div>
-      
-      
     </>
   );
 };
