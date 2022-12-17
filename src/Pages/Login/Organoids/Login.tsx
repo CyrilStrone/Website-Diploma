@@ -29,12 +29,33 @@ export const Login = () => {
     }
   };
 
+ 
+  const soldCheckbox = () => {
+    
+    }
   return (
     <>
       <div className={`Login`}>
+      <div className="Login_Block">
+        <div className="Login_Block-Title">
+        Вход
+        </div>
+        <div className="Login_Block-Mail">
+        <input type="email" value="Email"/>
+
+        </div>
+        <div className="Login_Block-Password">
+          <input type="password" value="Пароль"/>
+        <Link className="Login_Block-Password_Forgot" to={"/Forgot"}>Забыли?</Link>
+
+        </div>
+        <div className="Login_Block-Check">
+        <input type="checkbox"  onChange={soldCheckbox} />
+        Запомнить меня
+        </div>
         <Link to={"/User"}  onClick={handleClick}>Login</Link>
-        <Link to={"/Forgot"}>Forgot your password ?</Link>
         <Link to={"/Registration"}>Registration</Link>
+      </div>
       </div>
       
       

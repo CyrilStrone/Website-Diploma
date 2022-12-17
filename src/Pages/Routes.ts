@@ -44,13 +44,13 @@ export const Pages = [
 export const PagesLogin = [
     {
         link: '/Registration',
-        title: 'Registration',
+        title: 'Регистрация',
         class:'HeaderNav_Registration',
         component: Registration,
     },
     {
         link: '/User',
-        title: 'User',
+        title: 'Пользователь',
         component: User,
     },
     {
@@ -60,7 +60,7 @@ export const PagesLogin = [
     },
     {
         link: '/Login',
-        title: 'Login',
+        title: 'Вход',
         component: Login,
     }
     
