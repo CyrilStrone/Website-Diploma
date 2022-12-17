@@ -1,0 +1,19 @@
+.Major_Link{
+    background: #7876E6;
+    border-radius: 15px;
+    color: white !important;
+    padding-left: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 14px;
+}
+.Major_Title-Button a{
+    font-family: "San Francisco";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+    opacity: 0.8;
+    color: #000000;
+    display: block;
+}
