@@ -7,8 +7,10 @@ export const HomeTop = () => {
 
   return (
     <div className="HomeTop">
-     <HomeTopPicture/>
-     <HomeTopInfo/>
+      <div className="HomeTop_Top">
+      <HomeTopPicture/>
+      <HomeTopInfo/>
+      </div>
     </div>
   );
 };

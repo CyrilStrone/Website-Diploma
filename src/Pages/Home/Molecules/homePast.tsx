@@ -10,13 +10,13 @@ export const HomePast = () => {
 
   let HomePastArray:IHomePastBlock[] = [];
 usersPastTop.map((e:any)=>{
-  HomePastArray.push({ Picture: e.picture, Name: e.name,Job:e.job},)
+  HomePastArray.push({ Picture: e.picture, Name: e.name,Job:e.job,Stackes:e.Stackes},)
 })
   return (
     <div className="HomePast">
      {
       HomePastArray.map((e, i) => (
-        <HomePastBlock Picture={e.Picture} Name={e.Name} Job={e.Job}/>
+        <HomePastBlock Picture={e.Picture} Name={e.Name} Job={e.Job} Stackes={e.Stackes}/>
       ))
      }
     </div>

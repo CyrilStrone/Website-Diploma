@@ -19,9 +19,14 @@ export const UserContentStackes = (params: IUserContentStackes) => {
 
   return (
     <>
+      <div className="UserContent_StackesUser_Title">
+        Стэк
+      </div>
+      <div className="UserContent_StackesUser_Stackes">
       {userStackes.map((e, i) => (
         <div className="UserContent_StackesUser_Stacke">{e}</div>
       ))}
+      </div>
     </>
   );
 };

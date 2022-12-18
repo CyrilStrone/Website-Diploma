@@ -15,7 +15,7 @@ import "../Styles/UserContent_FullDescriptionUser.css";
 import "../Styles/UserContent_SocialNetworksUser.css";
 import { UserContentStackes } from "../Atoms/UserContentStackes";
 import { UserContentFullDescription } from "../Atoms/UserContentFullDescription";
-import { UserContentShortDescription } from "../Atoms/UserContentShortDescription";
+// import { UserContentShortDescription } from "../Atoms/UserContentShortDescription";
 import { UserContentSocialNetworks } from "../Atoms/UserContentSocialNetworks";
 UserContentSocialNetworks;
 export const User = () => {
@@ -26,10 +26,6 @@ export const User = () => {
     { class: "UserContent_JobNameUser", Component: <UserContentJobName /> },
     { class: "UserContent_StackesUser", Component: <UserContentStackes /> },
     {
-      class: "UserContent_ShortDescriptionUser",
-      Component: <UserContentShortDescription />,
-    },
-    {
       class: "UserContent_FullDescriptionUser",
       Component: <UserContentFullDescription />,
     },
@@ -37,7 +33,6 @@ export const User = () => {
       class: "UserContent_SocialNetworksUser",
       Component: <UserContentSocialNetworks />,
     },
-    { class: "UserContent_LogoutUser", Component: <UserContentLogout /> },
   ];
   const UserContentArrayNoAuthorization: IUserContent[] = [
     { class: "UserContent_Authorization", Component: <UserContentLogout /> },

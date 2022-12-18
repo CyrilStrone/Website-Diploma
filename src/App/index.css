@@ -21,8 +21,21 @@ body {
   min-height: 100vh;
   background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
 }
+.App:has(.Major) {
+  justify-content: flex-start
+
+}
 .App:has(.Home) {
   background: white;
+}
+.App:has(.User) {
+  background: white;
+}
+.App:has(.User) .Header {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.User) .Footer {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
 }
 .App:has(.Home) .Header {
   background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);

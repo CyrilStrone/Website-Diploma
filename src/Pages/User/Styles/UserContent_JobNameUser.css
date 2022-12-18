@@ -1,23 +1,48 @@
 .UserContent_JobNameUser{
     display: flex;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 5%;
+    padding: 1em;
     padding-bottom: 0%;
+    padding-right: 0;
+}
+.UserContentJobName_ShortDescription{
+    margin-top: 1em;
+    height: 100%;
+    width: 100%;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 1em;
+line-height: 19px;
+
+color: #000000;
+}
+.UserContentJobName_NameAndJob{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 .UserContentJobName_Name{
-    font-family: "San Francisco";
-    font-weight: 800;
-    font-size: 2.4vh;
-    line-height: 26px;
-    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;    
+    color: #000000;
 }
 .UserContentJobName_Job{
-    font-family: "San Francisco";
+    background: #7876e6;
+    border-radius: 8.41667px 0px 0px 8.41667px;
+    padding-left: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-right: 0.3rem;
+    font-family: "Inter";
+    font-style: normal;
     font-weight: 600;
-    font-size: 2vh;
-    line-height: 26px;
-    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    line-height: 30px;
 }
