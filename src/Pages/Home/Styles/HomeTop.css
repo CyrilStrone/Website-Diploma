@@ -1,13 +1,18 @@
 .HomeTop {
-  height: 380px;
+  /* height: 380px; */
   width: 100%;
-  background: rgba(34, 34, 34, 0.1);
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;
-  align-items: center;
+  align-items: start;
+  margin-top: 1em;
+  background: rgba(120, 118, 230, 0.18);
+  backdrop-filter: blur(7.5px);
+  /* Note: backdrop-filter has minimal browser support */
+  padding: 1em;
+padding-right: 0;
+  border-radius: 15px 15px 0px 0px;
 }
 .HomeTopPicture {
-  height: 100%;
   width: 100%;
   grid-column-start: 1;
   grid-column-end: 1;
@@ -15,7 +20,6 @@
   grid-row-end: 1;
 }
 .HomeTopInfo {
-  height: 100%;
   width: 100%;
   grid-column-start: 2;
   grid-column-end: 2;
@@ -25,38 +29,53 @@
 .HomeTopPicture img {
   height: 100%;
   max-width: 100%;
+  border-radius: 10px;
 }
 .HomeTopPicture {
   max-height: 300px;
-  display: flex;
-  justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
 }
 .HomeTopInfo {
-  height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-rows: 0.2fr 0.6fr 0.2fr;
-  align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .HomeTopInfo_JobAndName {
-  font-family: "IM FELL English";
+  font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  font-size: 1.4rem;
   line-height: 30px;
   display: flex;
-
-  color: #000000;
+  justify-content: space-between;
+  align-items: center;
 }
 .HomeTopInfo_JobAndName_Name {
   padding-right: 30px;
+  color: #000000;
+}
+.HomeTopInfo_JobAndName_Job {
+  background: #7876e6;
+  border-radius: 8.41667px 0px 0px 8.41667px;
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-right: 0.3rem;
 }
 .HomeTopInfo_ShortDescription {
-  height: 100%;
-  font-family: "San Francisco";
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 19px;
+  height: 100%;
+
   text-decoration: none;
   opacity: 0.8;
   color: #000000;
@@ -64,20 +83,19 @@
 .HomeTopInfo_SocialNetworks {
   display: flex;
   flex-direction: row;
-  height: 100%;
   align-items: center;
 }
 .HomeTopInfo_SocialNetworks_Network {
-  font-family: "San Francisco";
-  font-weight: 800;
-  font-size: 20px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 1rem;
   line-height: 26px;
   text-decoration: none;
   color: white;
-  background-color: #222222;
+  background-color: #7876e6;
+  opacity: 0.8;
   background-clip: border-box;
   margin-right: 2vw;
-  margin-bottom: 1vw;
   border-radius: 8px;
   width: 80px;
   height: 30px;

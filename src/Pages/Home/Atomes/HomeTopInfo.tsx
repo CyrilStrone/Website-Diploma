@@ -13,23 +13,23 @@ export const HomeTopInfo = () => {
 
   return (
     <div className="HomeTopInfo">
-     <div className="HomeTopInfo_JobAndName">
-      <div className="HomeTopInfo_JobAndName_Name">
-      {userTopHomeName }
-      </div>
-        <div>
-        {userTopHomeJob}
+      <div className="HomeTopInfo_JobAndName">
+        <div className="HomeTopInfo_JobAndName_Name">
+          {userTopHomeName}
         </div>
-        
-     </div>
-     <div className="HomeTopInfo_ShortDescription">
-     {userTopHomeShortDescription}
+        <div className="HomeTopInfo_JobAndName_Job">
+          {userTopHomeJob}
+        </div>
+
+      </div>
+      <div className="HomeTopInfo_ShortDescription">
+        {userTopHomeShortDescription}
       </div>
 
       <div className="HomeTopInfo_SocialNetworks">
         {userTopHomeSocialNetworks.map((e, i) => (
-        <div className="HomeTopInfo_SocialNetworks_Network">{e}</div>
-      ))}
+          <div className="HomeTopInfo_SocialNetworks_Network">{e}</div>
+        ))}
       </div>
     </div>
   );
