@@ -12,6 +12,11 @@
     flex-direction: column;
     justify-content: flex-end
 }
+@media (max-width: 1920px) {
+  .FooterGeneral {
+    width: 80%;
+  }
+}
 .FooterGeneral_Logo img {
   height: 100%;
   width: 100%;

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { setAnotheUserId } from "../../../Common/hooksAnotherUser";
 
-export interface IHomePastBlock {
+export interface ISearchPastBlock {
   id?: number;
   Name?: string;
   Job?: string;
@@ -12,23 +12,23 @@ export interface IHomePastBlock {
   onClick?: () => void;
 }
 
-export const HomePastBlock = (params: IHomePastBlock) => {
+export const SearchPastBlock = (params: ISearchPastBlock) => {
   let navigate = useNavigate(); 
   let handleClick = (e:any) => {
     setAnotheUserId(Number(e))
       navigate("/AnotherUser");
   };
   return (
-    <div className="HomePastBlock" id={params.id.toString()} onClick={()=>handleClick(params.id)}>
-      <div className="HomePastBlock_Picture-Job">
-        <div className="HomePastBlock_Picture">
+    <div className="SearchPastBlock" id={params.id.toString()} onClick={()=>handleClick(params.id)}>
+      <div className="SearchPastBlock_Picture-Job">
+        <div className="SearchPastBlock_Picture">
           <img src={params.Picture} alt="Картинка" />
         </div>
-        <div className="HomePastBlock_Job">{params.Job}</div>
+        <div className="SearchPastBlock_Job">{params.Job}</div>
       </div>
-      <div className="HomePastBlock_Name">{params.Name}</div>
-      <div className="HomePastBlock_Stackes">{params.Stackes.map((e:any) => (
-        <div className="HomePastBlock_Stackes-Stacke">
+      <div className="SearchPastBlock_Name">{params.Name}</div>
+      <div className="SearchPastBlock_Stackes">{params.Stackes.map((e:any) => (
+        <div className="SearchPastBlock_Stackes-Stacke">
             {e}
         </div>
       ))}</div>

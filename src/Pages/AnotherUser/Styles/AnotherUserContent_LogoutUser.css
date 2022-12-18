@@ -1,10 +1,10 @@
-.UserContentLogout_Buttom {
+.AnotherUserContentLogout_Buttom {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-top: 1em;
 }
-.UserContentLogout_Buttom-Block {
+.AnotherUserContentLogout_Buttom-Block {
   border: 1px solid #9500b9;
   border-radius: 5px;
   padding: 10px 20px;
@@ -18,10 +18,10 @@
   text-decoration: none;
   color: #9500b9;
 }
-.UserContentLogout_Buttom-Block a {
+.AnotherUserContentLogout_Buttom-Block a {
   text-decoration: none;
 }
-.UserContentLogout_Buttom-Block_2{
+.AnotherUserContentLogout_Buttom-Block_2{
     border: 1px solid #9500b9;
     border-radius: 5px;
     padding: 10px 20px;
@@ -36,7 +36,7 @@
     color: white;
     margin-right: 1em;
 }
-.UserContentLogout_Buttom-Block_2 a{
+.AnotherUserContentLogout_Buttom-Block_2 a{
     text-decoration: none;
 
 }

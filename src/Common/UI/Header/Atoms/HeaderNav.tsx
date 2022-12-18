@@ -1,5 +1,7 @@
+import { useStore } from "effector-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { $userTopHomeName } from "../../../../../src/Common/hooksHome";
 import { setmenuBurger } from "../../../../../src/Common/hooks";
 
 export interface IHeaderNav {
@@ -17,9 +19,11 @@ export const HeaderNav = (params: IHeaderNav) => {
   const closeSideBar = () => {
     setmenuBurger(false)
   }
+  const userTopHomeName = useStore($userTopHomeName);
+console.log(params.link)
   return (
     <>
-      {params.link == "/User" ? (
+      {params.link == "User" ? (
         <Link
           className={`${params.class} HeaderNav`}
           to={params.link}
@@ -27,9 +31,9 @@ export const HeaderNav = (params: IHeaderNav) => {
           onClick={closeSideBar}
           style={params.authorization == false ? { display: "none" } : {}}
         >
-          {params.text}
+          {userTopHomeName}
         </Link>
-      ) : params.link == "/Login" ? (
+      ) : params.link == "Login" ? (
         <Link
           className={`${params.class} HeaderNav`}
           onClick={closeSideBar}
@@ -39,7 +43,7 @@ export const HeaderNav = (params: IHeaderNav) => {
         >
           {params.text}
         </Link>
-      ) :  params.link == "/Forgot" ? (
+      ) :  params.link == "Forgot" ? (
         <Link
           className={`${params.class} HeaderNav`}
           onClick={closeSideBar}

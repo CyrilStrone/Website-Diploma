@@ -49,13 +49,6 @@ export const HeaderGeneral = () => {
                     indexlink={e.indexlink} class={e.class} authorization={e.authorization} text={e.text}
                 />)}
             </div>
-            {/* <div className={`HeaderGeneral_Burger`}>
-            <Menu onOpen={handleIsOpen} onClose={handleIsOpen} isOpen={menuBurger} burgerButtonClassName={"HeaderGeneral_BurgerButtom"} customBurgerIcon={ <img src={burgerIcon} /> } customCrossIcon={ <img src={BurgerIconExit} /> } right  pageWrapId={"page-wrap"} outerContainerId={"App"}>
-                {HeaderNavArray.map((e,i)=><HeaderNav link={e.link}
-                    indexlink={e.indexlink} class={e.class} authorization={e.authorization} text={e.text} 
-                />)}
-            </Menu>
-            </div> */}
 
         </div>
     );

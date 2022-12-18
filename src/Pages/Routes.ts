@@ -1,12 +1,12 @@
 
 import { Home } from './Home/Ogranoids/home'
 import { User } from './User/Ogranoids/User'
-import { Search } from './Search/Ogranoids/search'
+import { Search } from './Search/Ogranoids/Search'
 import { Premium } from './Premium/Ogranoids/premium'
 import { Login } from './Login/Organoids/Login'
 import { Forgot } from './Forgot/Organoids/Forgot'
 import { Registration } from './Registration/Organoids/Registration'
-import { Major } from './Major/Ogranoids/Major'
+import { AnotherUser } from './AnotherUser/Ogranoids/AnotherUser'
 
 // export interface IRoute {
 //     link: string
@@ -16,50 +16,52 @@ import { Major } from './Major/Ogranoids/Major'
 
 export const Pages = [
     {
-        link: '/',
-        title: 'Major',
-        component: Major,
-    },
-    {
-        link: '/Home',
+        link: 'Home',
         title: 'Home',
         component: Home,
     },
     {
-        link: '/User',
+        link: 'User',
         title: 'User',
         component: User,
     },
     {
-        link: '/Search',
+        link: 'Search',
         title: 'Search',
         component: Search,
     },
     {
-        link: '/Premium',
+        link: 'Premium',
         title: 'Premium',
         component: Premium,
     },
 ]
+export const PagesAnotherUser = [
+    {
+        link: 'AnotherUser',
+        title: 'AnotherUser',
+        component: AnotherUser,
+    }
+]
 export const PagesLogin = [
     {
-        link: '/Registration',
+        link: 'Registration',
         title: 'Регистрация',
         class:'HeaderNav_Registration',
         component: Registration,
     },
     {
-        link: '/User',
+        link: 'User',
         title: 'Пользователь',
         component: User,
     },
     {
-        link: '/Forgot',
+        link: 'Forgot',
         title: 'Forgot',
         component: Forgot,
     },
     {
-        link: '/Login',
+        link: 'Login',
         title: 'Вход',
         component: Login,
     }

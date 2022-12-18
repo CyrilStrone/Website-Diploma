@@ -1,6 +1,5 @@
 import { useStore } from "effector-react";
 import React from "react";
-import { $userAuthorization } from "../../../Common/hooks";
 import { UserContentJobName } from "../Atoms/UserContentJobName";
 import { UserContentLogout } from "../Atoms/UserContentLogout";
 import { UserContentPicture } from "../Atoms/UserContentPicture";
@@ -17,6 +16,8 @@ import { UserContentStackes } from "../Atoms/UserContentStackes";
 import { UserContentFullDescription } from "../Atoms/UserContentFullDescription";
 // import { UserContentShortDescription } from "../Atoms/UserContentShortDescription";
 import { UserContentSocialNetworks } from "../Atoms/UserContentSocialNetworks";
+import { Link } from "react-router-dom";
+import { $userAuthorization, setuserAuthorization } from "../../../Common/hooks";
 UserContentSocialNetworks;
 export const User = () => {
   const userAuthorization = useStore($userAuthorization);
@@ -38,17 +39,32 @@ export const User = () => {
     { class: "UserContent_Authorization", Component: <UserContentLogout /> },
   ];
 
+  let handleClick = () => {
+    if (userAuthorization) {
+      setuserAuthorization(false);
+    } else {
+      setuserAuthorization(true);
+    }
+  };
   return (
     <div className={`User`}>
       <div className={`User_Contents`}>
         {userAuthorization
           ? UserContentArray.map((e, i) => (
-              <UserContent class={e.class} Component={e.Component} />
-            ))
+            <UserContent class={e.class} Component={e.Component} />
+          ))
           : UserContentArrayNoAuthorization.map((e, i) => (
-              <UserContent class={e.class} Component={e.Component} />
-            ))}
+            <UserContent class={e.class} Component={e.Component} />
+          ))}
       </div>
+      <div className={`UserContentLogout_Buttom`}>
+        <button className={`UserContentLogout_Buttom-Block_2`} >
+          Редактировать
+        </button>
+        <button className={`UserContentLogout_Buttom-Block`} onClick={handleClick}>
+          {userAuthorization ? <Link to={"/Login"}>Выход</Link> : <a>Вход</a>}
+        </button>
+      </div >
     </div>
   );
 };

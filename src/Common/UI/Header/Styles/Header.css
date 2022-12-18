@@ -15,6 +15,7 @@
   opacity: 0.8;
   color: #000000;
     display: block;
+    white-space:nowrap;
 }
 .HeaderNav_Registration{
   background: #7876E6;
@@ -60,6 +61,12 @@
 }
 .HeaderGeneral_Title {
   display: none;
+}
+
+@media (max-width: 1920px) {
+  .HeaderGeneral {
+    width: 80%;
+  }
 }
 @media (orientation: portrait) {
   .HeaderGeneral_Title {

@@ -1,6 +1,10 @@
 import { createEvent, createStore } from "effector";
 import UserTopHomePicture from "../Common/Assets/Home/TopPictureHome.png"
 
+export const $userTopHomeId= createStore<number>(13123)  
+export const setuserTopHomeId = createEvent<number>()
+$userTopHomeId.on(setuserTopHomeId, (_,val)=> val);
+
 export const $userTopHomeName= createStore<string>("Даня Булгаков")  
 export const setuserTopHomeName = createEvent<string>()
 $userTopHomeName.on(setuserTopHomeName, (_,val)=> val);
@@ -22,6 +26,6 @@ export const $userTopHomeShortDescription= createStore<string>("Очень ко�
 export const setuserTopHomeShortDescription = createEvent<string>()
 $userTopHomeShortDescription.on(setuserTopHomeShortDescription, (_,val)=> val);
 
-export const $usersPastTop= createStore<any>([{picture:UserTopHomePicture,name:"Даня Булгаков",job:"шмэкэндер",Stackes:["React","TS","HTML"]},{picture:UserTopHomePicture,name:"Николай Булгаков",job:"шмэкэндер",Stackes:["React","TS","HTML"]},{picture:UserTopHomePicture,name:"Бабушников Даня",job:"шмэкэндер",Stackes:["React","TS","HTML"]},{picture:UserTopHomePicture,name:"Бабушников Даня",job:"шмэкэндер",Stackes:["React","TS","HTML"]}])  
+export const $usersPastTop= createStore<any>([{picture:UserTopHomePicture,name:"Даня Булгаков",job:"шмэкэндер",Stackes:["React","TS","HTML"],id:123123},{picture:UserTopHomePicture,name:"Николай Булгаков",job:"шмэкэндер",Stackes:["React","TS","HTML"],id:123123},{picture:UserTopHomePicture,name:"Бабушников Даня",job:"шмэкэндер",Stackes:["React","TS","HTML"],id:123123},{picture:UserTopHomePicture,name:"Бабушников Даня",job:"шмэкэндер",Stackes:["React","TS","HTML"],id:123123}])  
 export const setusersPastTop = createEvent<any>()
 $usersPastTop.on(setusersPastTop, (_,val)=> val);

@@ -1,9 +1,9 @@
-import { useStore } from "effector-react";
+// import { useStore } from "effector-react";
 // import { PagesLogin } from "../../Routes";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  $userAuthorization,
+  // $userAuthorization,
   setuserAuthorization,
 } from "../../../Common/hooks";
 import "../Styles/Login.css";
@@ -21,14 +21,14 @@ import Picture from '../../../Common/Assets/Login/LoginPicture.png';
 //   Component?:JSX.Element;
 // }
 export const Login = () => {
-  const userAuthorization = useStore($userAuthorization);
+  // const userAuthorization = useStore($userAuthorization);
 
   let handleClick = () => {
-    if (userAuthorization) {
-      setuserAuthorization(false);
-    } else {
+    // if (userAuthorization) {
+    //   setuserAuthorization(false);
+    // } else {
       setuserAuthorization(true);
-    }
+    // }
   };
 
   const soldCheckbox = () => {};

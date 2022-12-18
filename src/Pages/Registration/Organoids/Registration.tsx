@@ -1,22 +1,22 @@
-import { useStore } from "effector-react";
+// import { useStore } from "effector-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  $userAuthorization,
+  // $userAuthorization,
   setuserAuthorization,
 } from "../../../Common/hooks";
 import "../Styles/Registration.css";
 import Picture from "../../../Common/Assets/Login/LoginPicture.png";
 
 export const Registration = () => {
-  const userAuthorization = useStore($userAuthorization);
+  // const userAuthorization = useStore($userAuthorization);
 
   let handleClick = () => {
-    if (userAuthorization) {
-      setuserAuthorization(false);
-    } else {
+    // if (userAuthorization) {
+    //   setuserAuthorization(false);
+    // } else {
       setuserAuthorization(true);
-    }
+    // }
   };
 
   const soldCheckbox = () => {};
