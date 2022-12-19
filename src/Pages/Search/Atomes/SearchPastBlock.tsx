@@ -8,18 +8,23 @@ export interface ISearchPastBlock {
   Job?: string;
   Link?: string;
   Picture?: string;
-  Stackes?:any;
+  Stackes?: any;
   onClick?: () => void;
 }
 
 export const SearchPastBlock = (params: ISearchPastBlock) => {
-  let navigate = useNavigate(); 
-  let handleClick = (e:any) => {
-    setAnotheUserId(Number(e))
-      navigate("/AnotherUser");
+  let navigate = useNavigate();
+  let handleClick = (e:any,b:any) => {
+    var newuserName = e.replace(/ /g, "-");
+    setAnotheUserId(Number(b))
+      navigate(`/AnotherUser/${newuserName}`);
   };
   return (
-    <div className="SearchPastBlock" id={params.id.toString()} onClick={()=>handleClick(params.id)}>
+    <div
+      className="SearchPastBlock"
+      id={params.id.toString()}
+      onClick={() => handleClick(params.Name,params.id)}
+    >
       <div className="SearchPastBlock_Picture-Job">
         <div className="SearchPastBlock_Picture">
           <img src={params.Picture} alt="Картинка" />
@@ -27,12 +32,11 @@ export const SearchPastBlock = (params: ISearchPastBlock) => {
         <div className="SearchPastBlock_Job">{params.Job}</div>
       </div>
       <div className="SearchPastBlock_Name">{params.Name}</div>
-      <div className="SearchPastBlock_Stackes">{params.Stackes.map((e:any) => (
-        <div className="SearchPastBlock_Stackes-Stacke">
-            {e}
-        </div>
-      ))}</div>
-
+      <div className="SearchPastBlock_Stackes">
+        {params.Stackes.map((e: any) => (
+          <div className="SearchPastBlock_Stackes-Stacke">{e}</div>
+        ))}
+      </div>
     </div>
   );
 };

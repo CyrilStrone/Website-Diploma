@@ -1,5 +1,7 @@
+import { useStore } from "effector-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { $userAuthorization, $userName } from "../../../../Common/hooks";
 
 export interface IFooterNav {
   id?: string;
@@ -12,18 +14,21 @@ export interface IFooterNav {
 }
 
 export const FooterNav = (params: IFooterNav) => {
+  const userAuthorization = useStore($userAuthorization);
+  const userName = useStore($userName);
+  var newuserName = userName.replace(/ /g, "-");
   return (
     <>
-      {params.link == "/User" ? (
-        <Link
+      {params.link == "User" ? (
+        (userAuthorization ? <Link
           className={`${params.class} FooterNav`}
-          to={params.link}
+          to={`${params.link}/${newuserName}`}
           key={params.indexlink}
           style={params.authorization == false ? { display: "none" } : {}}
         >
           {params.text}
-        </Link>
-      ) : params.link == "/Login" ? (
+        </Link> : null)
+      ) : params.link == "Login" ? (
         <Link
           className={`${params.class} FooterNav`}
           to={params.link}

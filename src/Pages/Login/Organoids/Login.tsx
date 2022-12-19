@@ -3,11 +3,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
+  $userName,
   // $userAuthorization,
   setuserAuthorization,
 } from "../../../Common/hooks";
 import "../Styles/Login.css";
 import Picture from '../../../Common/Assets/Login/LoginPicture.png';
+import { useStore } from "effector-react";
 
 
 // export interface ILoginArray {
@@ -22,7 +24,8 @@ import Picture from '../../../Common/Assets/Login/LoginPicture.png';
 // }
 export const Login = () => {
   // const userAuthorization = useStore($userAuthorization);
-
+  const userName = useStore($userName);
+  var newuserName = userName.replace(/ /g, "-");
   let handleClick = () => {
     // if (userAuthorization) {
     //   setuserAuthorization(false);
@@ -59,7 +62,7 @@ export const Login = () => {
             Запомнить меня
           </div>
           <div className="Login_Block-Login">
-            <Link to={"/User"} onClick={handleClick}>
+            <Link to={`/User/${newuserName}`} onClick={handleClick}>
               Войти
             </Link>
           </div>

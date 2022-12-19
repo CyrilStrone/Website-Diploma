@@ -14,12 +14,13 @@ export interface IHomePastBlock {
 
 export const HomePastBlock = (params: IHomePastBlock) => {
   let navigate = useNavigate(); 
-  let handleClick = (e:any) => {
-    setAnotheUserId(Number(e))
-      navigate("/AnotherUser");
+  let handleClick = (e:any,b:any) => {
+    var newuserName = e.replace(/ /g, "-");
+    setAnotheUserId(Number(b))
+      navigate(`/AnotherUser/${newuserName}`);
   };
   return (
-    <div className="HomePastBlock" id={params.id.toString()} onClick={()=>handleClick(params.id)}>
+    <div className="HomePastBlock" id={params.id.toString()} onClick={()=>handleClick(params.Name,params.id)}>
       <div className="HomePastBlock_Picture-Job">
         <div className="HomePastBlock_Picture">
           <img src={params.Picture} alt="Картинка" />

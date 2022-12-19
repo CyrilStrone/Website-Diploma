@@ -1,7 +1,6 @@
 import { useStore } from "effector-react";
 import React from "react";
 import { UserContentJobName } from "../Atoms/UserContentJobName";
-import { UserContentLogout } from "../Atoms/UserContentLogout";
 import { UserContentPicture } from "../Atoms/UserContentPicture";
 import { IUserContent, UserContent } from "../Molecules/UserContent";
 import "../Styles/User.css";
@@ -35,9 +34,7 @@ export const User = () => {
       Component: <UserContentSocialNetworks />,
     },
   ];
-  const UserContentArrayNoAuthorization: IUserContent[] = [
-    { class: "UserContent_Authorization", Component: <UserContentLogout /> },
-  ];
+
 
   let handleClick = () => {
     if (userAuthorization) {
@@ -53,9 +50,7 @@ export const User = () => {
           ? UserContentArray.map((e, i) => (
             <UserContent class={e.class} Component={e.Component} />
           ))
-          : UserContentArrayNoAuthorization.map((e, i) => (
-            <UserContent class={e.class} Component={e.Component} />
-          ))}
+          : null}
       </div>
       <div className={`UserContentLogout_Buttom`}>
         <button className={`UserContentLogout_Buttom-Block_2`} >

@@ -2,15 +2,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
+  $userName,
   // $userAuthorization,
   setuserAuthorization,
 } from "../../../Common/hooks";
 import "../Styles/Registration.css";
 import Picture from "../../../Common/Assets/Login/LoginPicture.png";
+import { useStore } from "effector-react";
 
 export const Registration = () => {
   // const userAuthorization = useStore($userAuthorization);
-
+  const userName = useStore($userName);
+  var newuserName = userName.replace(/ /g, "-");
   let handleClick = () => {
     // if (userAuthorization) {
     //   setuserAuthorization(false);
@@ -58,7 +61,7 @@ export const Registration = () => {
             Даю согласиена получение рекламной рассылки на мой email{" "}
           </div>
           <div className="Registration_Block-Registration">
-            <Link to={"/User"} onClick={handleClick}>
+            <Link to={`/User/${newuserName}`} onClick={handleClick}>
               Войти
             </Link>
           </div>

@@ -1,11 +1,8 @@
 import React from "react";
 import { Headerlogo, IHeaderlogo } from "../Atoms/HeaderLogo";
 // import {  IHeaderNav } from "../Atoms/HeaderNav";
-import { PagesLogin } from '../../../../Pages/Routes'
-import { $userAuthorization } from "../../../hooks";
 // import { $menuBurger, $userAuthorization, setmenuBurger } from "../../../hooks";
 
-import { useStore } from "effector-react";
 // import ikit from '../../../Assets/Search/ikit.jpg';
 import logo from '../../../Assets/Logo/LofoRzhaka.svg';
 // import burgerIcon from '../../../Assets/Burger/BurgerIcon.svg';
@@ -17,10 +14,9 @@ import { HeaderNav, IHeaderNav } from "../Atoms/HeaderNav";
 
 
 export const HeaderGeneral = () => {
-    const userAuthorization = useStore($userAuthorization);
     // const menuBurger = useStore($menuBurger);
     const HeaderlogoArray: IHeaderlogo[] = [
-        { link: "/Home", indexlink: "0", class: "Headerlogo_Elem", img: logo },
+        { link: "Home", indexlink: "0", class: "Headerlogo_Elem", img: logo },
     ]
 
     let HeaderNavArray: IHeaderNav[] = [];
@@ -30,7 +26,8 @@ export const HeaderGeneral = () => {
     // }
 
 
-    PagesLogin.map((page: any, index: any) => [HeaderNavArray.push({ link: page.link, indexlink: index, class: page.class ? `${page.class}` : "HeaderNav_Elem", authorization: userAuthorization, text: page.title })]);
+    // PagesLogin.map((page: any, index: any) => [HeaderNavArray.push({ link: page.link, indexlink: index, class: page.class ? `${page.class}` : "HeaderNav_Elem", authorization: userAuthorization, text: page.text })]);
+    HeaderNavArray.push({ link: "/Registration", class: "HeaderNav_Registration", text: "Регистрация" },{ link: "/Login", class: "HeaderNav_Elem", text: "Вход" },{ link: "/User", class: "HeaderNav_User", text: "Пользователь" })
     console.log(HeaderNavArray)
     return (
 
@@ -41,12 +38,12 @@ export const HeaderGeneral = () => {
                     indexlink={e.indexlink} class={e.class} img={e.img}
                 />)}
             </div>
-            <div className={`HeaderGeneral_Title`}>
+            {/* <div className={`HeaderGeneral_Title`}>
                 FMZFK
-            </div>
+            </div> */}
             <div className={`HeaderGeneral_Navs`}>
-                {HeaderNavArray.map((e, i) => <HeaderNav link={e.link}
-                    indexlink={e.indexlink} class={e.class} authorization={e.authorization} text={e.text}
+                {HeaderNavArray.map((e, i) => <HeaderNav 
+                  class={e.class}  text={e.text} link={e.link}
                 />)}
             </div>
 
