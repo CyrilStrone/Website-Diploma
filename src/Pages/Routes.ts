@@ -2,7 +2,7 @@
 import { Home } from './Home/Ogranoids/home'
 import { User } from './User/Ogranoids/User'
 import { Search } from './Search/Ogranoids/Search'
-import { Premium } from './Premium/Ogranoids/premium'
+import { Chat } from './Chat/Ogranoids/Chat'
 // import { Forgot } from './Forgot/Organoids/Forgot'
 
 // export interface IRoute {
@@ -28,9 +28,9 @@ export const Pages = [
         component: Search,
     },
     {
-        link: 'Premium',
-        title: 'Premium',
-        component: Premium,
+        link: 'Chat',
+        title: 'Chat',
+        component: Chat,
     },
 ]
 

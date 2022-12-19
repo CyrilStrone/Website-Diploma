@@ -70,6 +70,7 @@ body {
 .App:has(.Major) .Footer {
   display: none;
 }
+
 @media (max-width: 730px) {
   .App_Actual {
     width: 96%;

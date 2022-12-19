@@ -63,7 +63,7 @@ export const FooterGeneral = () => {
             </div>
         </div>
         <div className={`FooterGeneral_About_Right`}>
-        © 2022 Фуфелшмертц Пакость Инкорпорейтед. All Rights Reserved. 
+        © 2022 Фуфелшмертц Пакость Инкорпорейтед. Все права под контролем. 
         </div>
         <div className={`FooterGeneral_About_Social`}>
         <img src={fc} alt="fc" />

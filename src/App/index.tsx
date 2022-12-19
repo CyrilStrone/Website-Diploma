@@ -20,7 +20,6 @@ import { Major } from "Pages/Major/Ogranoids/Major";
 import { Home } from "Pages/Home/Ogranoids/home";
 import { Registration } from "Pages/Registration/Organoids/Registration";
 import { Login } from "Pages/Login/Organoids/Login";
-import { Premium } from "Pages/Premium/Ogranoids/premium";
 import { AnotherUser } from "Pages/AnotherUser/Ogranoids/AnotherUser";
 import { Forgot } from "Pages/Forgot/Organoids/Forgot";
 import { User } from "Pages/User/Ogranoids/User";
@@ -28,6 +27,7 @@ import { Search } from "Pages/Search/Ogranoids/Search";
 import { $userName } from "../Common/hooks";
 import { useStore } from "effector-react";
 import { $AnotheUserName } from "../Common/hooksAnotherUser";
+import { Chat } from "Pages/Chat/Ogranoids/Chat";
 
 export function App() {
   // require('./index.styl')
@@ -47,7 +47,7 @@ export function App() {
           {/* <Route path="/User" element={<User />}></Route> */}
           <Route path="/Forgot" element={<Forgot />}></Route>
           {/* <Route path="/AnotherUser" element={<AnotherUser />}></Route> */}
-          <Route path="/Premium" element={<Premium />}></Route>
+          <Route path="/Chat" element={<Chat />}></Route>
           <Route path="/Search" element={<Search />}></Route>
           <Route
             element={<User />}
