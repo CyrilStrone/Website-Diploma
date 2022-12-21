@@ -1,24 +1,83 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
-.App_Actual{
-    padding-left: 20%;
-    padding-right: 20%;
+.App_Actual {
+  padding-top: 44px;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-.App{
-
- background-color: beige;
-}
-@media (max-width: 730px) {
-    .App_Actual{
-        padding-left: 2%;
-        padding-right: 2%;
-    }
+@media (max-width: 1920px) {
+  .App_Actual {
+    width: 80%;
   }
-@media (orientation: portrait){
-    .App_Actual{
-        padding-left: 2%;
-        padding-right: 2%;
-       }
+}
+.App {
+  display: flex;
+  /* background-color: beige; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: max-content;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.Major) {
+  justify-content: flex-start
+
+}
+.App:has(.Home) {
+  background: white;
+}
+.App:has(.User) {
+  background: white;
+}
+.App:has(.User) .Header {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.User) .Footer {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.Search) {
+  background: white;
+}
+.App:has(.Search) .Header {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.Search) .Footer {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.AnotherUser) {
+  background: white;
+}
+.App:has(.AnotherUser) .Header {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.AnotherUser) .Footer {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.Home) .Header {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.Home) .Footer {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+
+.App:has(.Major) .Footer {
+  display: none;
+}
+
+@media (max-width: 730px) {
+  .App_Actual {
+    width: 96%;
+  }
+}
+@media (orientation: portrait) {
+  .App_Actual {
+    width: 96%;
+  }
 }

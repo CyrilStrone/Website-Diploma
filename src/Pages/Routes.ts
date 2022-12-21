@@ -1,9 +1,9 @@
 
 import { Home } from './Home/Ogranoids/home'
-import { User } from './User/Ogranoids/user'
-import { Search } from './Search/Ogranoids/search'
-import { Premium } from './Premium/Ogranoids/premium'
-
+import { User } from './User/Ogranoids/User'
+import { Search } from './Search/Ogranoids/Search'
+import { Chat } from './Chat/Ogranoids/Chat'
+// import { Forgot } from './Forgot/Organoids/Forgot'
 
 // export interface IRoute {
 //     link: string
@@ -13,23 +13,24 @@ import { Premium } from './Premium/Ogranoids/premium'
 
 export const Pages = [
     {
-        link: '/',
+        link: 'Home',
         title: 'Home',
         component: Home,
     },
     {
-        link: '/user',
+        link: 'User',
         title: 'User',
         component: User,
     },
     {
-        link: '/search',
+        link: 'Search',
         title: 'Search',
         component: Search,
     },
     {
-        link: '/Premium',
-        title: 'Premium',
-        component: Premium,
+        link: 'Chat',
+        title: 'Chat',
+        component: Chat,
     },
 ]
+

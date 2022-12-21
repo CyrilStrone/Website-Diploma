@@ -1,5 +1,7 @@
+import { useStore } from "effector-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { $userAuthorization, $userName } from "../../../../Common/hooks";
 
 export interface IFooterNav {
   id?: string;
@@ -12,13 +14,38 @@ export interface IFooterNav {
 }
 
 export const FooterNav = (params: IFooterNav) => {
+  const userAuthorization = useStore($userAuthorization);
+  const userName = useStore($userName);
+  var newuserName = userName.replace(/ /g, "-");
   return (
-    <Link to={params.link} key={params.indexlink}>
-      {
-        <div className={`${params.class} FooterNav`} style={params.authorization ? {display:"none"}:{}}>
+    <>
+      {params.link == "User" ? (
+        (userAuthorization ? <Link
+          className={`${params.class} FooterNav`}
+          to={`${params.link}/${newuserName}`}
+          key={params.indexlink}
+          style={params.authorization == false ? { display: "none" } : {}}
+        >
           {params.text}
-        </div>
-      }
-    </Link>
+        </Link> : null)
+      ) : params.link == "Login" ? (
+        <Link
+          className={`${params.class} FooterNav`}
+          to={params.link}
+          key={params.indexlink}
+          style={params.authorization == false ? {} : { display: "none" }}
+        >
+          {params.text}
+        </Link>
+      ) : (
+        <Link
+          className={`${params.class} FooterNav`}
+          to={params.link}
+          key={params.indexlink}
+        >
+          {params.text}
+        </Link>
+      )}
+    </>
   );
 };

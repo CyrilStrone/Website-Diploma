@@ -10,12 +10,10 @@ export interface IFooterlogo {
 }
 export const Footerlogo = (params: IFooterlogo) => {
   return (
-    <Link to={params.link} key={params.indexlink}>
-      {
-        <div className={`${params.class} Footerlogo`} >
+    <Link to={params.link} key={params.indexlink} className={`${params.class} Footerlogo`}>
+     
           <img src={params.img} alt="Картинка" />
-        </div>
-      }
+  
     </Link>
   );
 };

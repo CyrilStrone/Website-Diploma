@@ -1,36 +1,108 @@
 .Footer {
-  background: #222222;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  border-top: 2px solid rgba(169,124,85,0.1);;
 }
 .FooterGeneral {
   height: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20%;
-  padding-right: 20%;
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+    flex-direction: column;
+    justify-content: flex-end
+}
+@media (max-width: 1920px) {
+  .FooterGeneral {
+    width: 80%;
+  }
 }
 .FooterGeneral_Logo img {
+  height: 100%;
+  width: 100%;
+}
+.FooterGeneral_Logo{
   height: 50%;
 }
+.FooterGeneral_Logo a{
+  width: 100%;
+  height: 100%;
+}
 .FooterGeneral_Navs {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr  1fr ;
+  align-self: flex-start;
 }
 .FooterGeneral a {
-  font-family: "San Francisco";
+  font-family: 'Inter';
+  font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-decoration: none;
-
-  color: #ffffff;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  
+text-decoration: none;  
+  color: #0A142F;
 }
 .FooterGeneral_Navs a {
-  padding-right: 10%;
+  padding-right: 5vw;
 }
 .FooterGeneral_Navs a:last-child {
   padding-right: 0%;
+}
+.FooterGeneral_Navs a:nth-child(1) {
+  padding-bottom: 2vh
+}
+.FooterGeneral_Navs a:nth-child(2) {
+  padding-bottom: 2vh
+}
+.FooterGeneral_Navs a:nth-child(3) {
+  padding-bottom: 2vh
+}
+.FooterGeneral_Line{
+  background: #0F528B;
+  opacity: 0.1;
+  width: 95%;
+  height: 1px;
+  margin-top: 30px;
+  display: flex;
+    align-self: center;
+}
+.FooterGeneral_About{
+  display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+.FooterGeneral_About_Contacts{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+/* or 200% */
+
+
+color: #000000;
+}
+.FooterGeneral_About_Right{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  /* or 200% */
+  
+  
+  color: #000000;
+}
+.FooterGeneral_About_Social img{
+  margin-right: 10px;
+}
+.FooterGeneral_About_Social img:nth-child(){
+  margin-right: 0px;
 }
 @media (max-width: 730px) {
   .FooterGeneral {
@@ -38,11 +110,14 @@
     padding-right: 2%;
     justify-content: space-around;
   }
+  .FooterGeneral_Logo{
+    width: 50%;
+  }
 }
 @media (orientation: portrait) {
   .FooterGeneral {
-    padding-left: 2%;
-    padding-right: 2%;
+    width: 96%;
+
     justify-content: space-around;
   }
 }
