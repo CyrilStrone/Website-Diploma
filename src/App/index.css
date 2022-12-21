@@ -70,7 +70,15 @@ body {
 .App:has(.Major) .Footer {
   display: none;
 }
-
+.App:has(.Chat) {
+  background: white;
+}
+.App:has(.Chat) .Header {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
+.App:has(.Chat) .Footer {
+  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
+}
 @media (max-width: 730px) {
   .App_Actual {
     width: 96%;

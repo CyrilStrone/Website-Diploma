@@ -56,7 +56,7 @@ export const Chat = () => {
   ];
   return (
     <div className="Chat">
-      <h1>Чат</h1>
+      <div className="Chat_Title">Чат</div>
       <div className="Chat_Block">
         <ChatList
           lazyLoadingImage={""}
@@ -65,17 +65,15 @@ export const Chat = () => {
           dataSource={aboba2}
         />
         <div className="Chat_Message">
-        <MessageList
-          // referance="Chat"
-          className="message-list"
-          lockable={true}
-          dataSource={aboba}
-          toBottomHeight={"100%"}
-        />
-                <Input placeholder="Type here..." multiline={true} maxHeight={1000}/>
-
-              </div>
-
+          <MessageList
+            // referance="Chat"
+            className="message-list"
+            lockable={true}
+            dataSource={aboba}
+            toBottomHeight={"100%"}
+          />
+          <Input placeholder="Type here..." multiline={true} maxHeight={1000} />
+        </div>
       </div>
     </div>
   );
