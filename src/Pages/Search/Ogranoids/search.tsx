@@ -6,14 +6,9 @@ import SearchPicture from "../../../Common/Assets/Search/Search.svg";
 import FilterPicture from "../../../Common/Assets/Search/Filter.svg";
 
 export const Search = () => {
-    // require('./index.styl')
-    //   const monthNames = ["ЯНВАРЯ", "ФЕВРАЛЯ", "МАРТА", "АПРЕЛЯ", "МАЯ", "ИЮНЯ",
-    //   "ИЮЛЯ", "АВГУСТА", "СЕНЯТБРЯ", "ОКТЯБРЯ", "НОЯБРЯ", "ДЕКАБРЯ"
-    // ];
     let ChangeSearch = (term: any) => {
-        console.log(term)
+        console.log(term.target.value)
     };
-    // let DATE = (new Date).getDate() + (" " + monthNames[(new Date()).getMonth()]);
     return (
         <div className="Search">
             <div className="Search-input">

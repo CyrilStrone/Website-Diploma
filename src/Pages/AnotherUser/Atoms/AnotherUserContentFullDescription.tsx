@@ -1,7 +1,7 @@
 import { useStore } from "effector-react";
 import React from "react";
+import { $AnotheUserFullDescription } from "../../../../src/Common/hooksAnotherUser";
 // import { Link } from "react-router-dom";
-import { $userFullDescription } from "../../../Common/hooks";
 
 export interface IAnotherUserContentFullDescription {
   id?: string;
@@ -10,7 +10,7 @@ export interface IAnotherUserContentFullDescription {
   typeBlock?: string;
 }
 export const AnotherUserContentFullDescription = (params: IAnotherUserContentFullDescription) => {
-  const AnotherUserFullDescription = useStore($userFullDescription);
+  const AnotherUserFullDescription = useStore($AnotheUserFullDescription);
   // let handleClick = () => {
   //   <Link to={params.link} key={params.indexlink} className={`${params.class} Footerlogo`}>
 

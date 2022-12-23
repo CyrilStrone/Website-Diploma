@@ -16,7 +16,7 @@ export const Chat = () => {
     {
       position: "right",
       type: "text",
-      title: "Данил БигПенисовый",
+      title: "Данил Биг",
       text: "Ага, иуууу",
     },
   ];

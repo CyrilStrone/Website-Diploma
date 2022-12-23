@@ -1,7 +1,7 @@
 import { useStore } from "effector-react";
 import React from "react";
 // import { Link } from "react-router-dom";
-import { $userStackes } from "../../../Common/hooks";
+import { $AnotheUserStackes } from "../../../../src/Common/hooksAnotherUser";
 
 export interface IAnotherUserContentStackes {
   id?: string;
@@ -10,7 +10,7 @@ export interface IAnotherUserContentStackes {
   typeBlock?: string;
 }
 export const AnotherUserContentStackes = (params: IAnotherUserContentStackes) => {
-  const AnotherUserStackes = useStore($userStackes);
+  const AnotheUserStackes = useStore($AnotheUserStackes);
   // let handleClick = () => {
   //   <Link to={params.link} key={params.indexlink} className={`${params.class} Footerlogo`}>
 
@@ -23,7 +23,7 @@ export const AnotherUserContentStackes = (params: IAnotherUserContentStackes) =>
         Стэк
       </div>
       <div className="AnotherUserContent_StackesAnotherUser_Stackes">
-      {AnotherUserStackes.map((e, i) => (
+      {AnotheUserStackes.map((e, i) => (
         <div className="AnotherUserContent_StackesAnotherUser_Stacke">{e}</div>
       ))}
       </div>
