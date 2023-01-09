@@ -24,60 +24,6 @@ body {
   justify-content: space-between;
   height: max-content;
   min-height: 100vh;
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.Major) {
-  justify-content: flex-start
-
-}
-.App:has(.Home) {
-  background: white;
-}
-.App:has(.User) {
-  background: white;
-}
-.App:has(.User) .Header {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.User) .Footer {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.Search) {
-  background: white;
-}
-.App:has(.Search) .Header {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.Search) .Footer {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.AnotherUser) {
-  background: white;
-}
-.App:has(.AnotherUser) .Header {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.AnotherUser) .Footer {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.Home) .Header {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.Home) .Footer {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-
-.App:has(.Major) .Footer {
-  display: none;
-}
-.App:has(.Chat) {
-  background: white;
-}
-.App:has(.Chat) .Header {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
-}
-.App:has(.Chat) .Footer {
-  background: linear-gradient(90deg, #f2bff1 0%, #f7f3ed 100%);
 }
 @media (max-width: 730px) {
   .App_Actual {

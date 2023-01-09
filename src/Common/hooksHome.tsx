@@ -1,6 +1,10 @@
 import { createEvent, createStore } from "effector";
 import UserTopHomePicture from "../Common/Assets/Home/TopPictureHome.png"
 
+export const $actualPage= createStore<string>("Home")  
+export const setactualPage = createEvent<string>()
+$actualPage.on(setactualPage, (_,val)=> val);
+
 export const $userTopHomeId= createStore<number>(13123)  
 export const setuserTopHomeId = createEvent<number>()
 $userTopHomeId.on(setuserTopHomeId, (_,val)=> val);

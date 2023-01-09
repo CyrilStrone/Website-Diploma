@@ -1,9 +1,9 @@
-import { useStore } from "effector-react";
+// import { useStore } from "effector-react";
 import React from "react";
 import { Link } from "react-router-dom";
 // import { $userTopHomeName } from "../../../../../src/Common/hooksHome";
-import { $userAuthorization, $userName } from "../../../../../src/Common/hooks";
-import Picture from"../../../Assets/Header/Picture.svg"
+// import { $userAuthorization, $userName } from "../../../../../src/Common/hooks";
+// import Picture from"../../../Assets/Header/Picture.svg"
 export interface IHeaderNav {
   id?: string;
   text?: string;
@@ -16,37 +16,16 @@ export interface IHeaderNav {
 }
 
 export const HeaderNav = (params: IHeaderNav) => {
-  const userAuthorization = useStore($userAuthorization);
-  const userName = useStore($userName);
-  var newuserName = userName.replace(/ /g, "-");
+  // const userAuthorization = useStore($userAuthorization);
+  // const userName = useStore($userName);
+  // var newuserName = userName.replace(/ /g, "-");
   return (
     <>
-      {userAuthorization ? (
-        params.link == "/User" ? (
-          <>
-           <Link
-            to={`${params.link}/${newuserName}`}
-            className={`${params.class} HeaderNav`}
-          >
-            {userName}
-          </Link>
-          <Link
-          to={`${params.link}/${newuserName}`}
-          className={`HeaderNav_Picture HeaderNav`}
-        >
-                    <img src={Picture} alt="Картинка" />
-
-        </Link>
-          </>
-         
-        ) : null
-      ) : (
-        params.link !== "/User" ? (
+      
         <Link to={`${params.link}`} className={`${params.class} HeaderNav`}>
           {params.text}
         </Link>
-        ):null
-      )}
+       
     </>
   );
 };
