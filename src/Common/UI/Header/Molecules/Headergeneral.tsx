@@ -4,7 +4,7 @@ import { Headerlogo, IHeaderlogo } from "../Atoms/HeaderLogo";
 // import { $menuBurger, $userAuthorization, setmenuBurger } from "../../../hooks";
 
 // import ikit from '../../../Assets/Search/ikit.jpg';
-import logo from "../../../Assets/Logo/LogoBig.svg";
+import logo from "../../../Assets/Logo/LogoMin.jpg";
 
 // import burgerIcon from '../../../Assets/Burger/BurgerIcon.svg';
 // import BurgerIconExit from '../../../Assets/Burger/BurgerIconExit.svg';
