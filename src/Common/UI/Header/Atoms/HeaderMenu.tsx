@@ -35,6 +35,7 @@ export const HeaderMenu = () => {
           onClick={() => {
             setmenuFlag(!menuFlag);
           }}
+          style={menuFlag ? {color: "#0e8ac3"} : {color: "#000000"}}
         >
           {actualPage}
         </div>
