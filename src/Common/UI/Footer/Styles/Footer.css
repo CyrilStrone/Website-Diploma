@@ -128,7 +128,7 @@
     width: 50%;
   }
   .FooterGeneral_Logo_Pictures img{
-    
+    background-size: cover;
   }
   .FooterGeneral_Logo_Pictures a{
     height: 30%;
