@@ -28,13 +28,12 @@ export const HeaderMenu = () => {
   );
   return (
     <>
-      <div className={`HeaderMenu_ActualPage`}>
-        <Hamburger hideOutline={false} size={20} color="#0E8AC3" toggled={menuFlag} toggle={setmenuFlag} />
+      <div className={`HeaderMenu_ActualPage`} onClick={() => {
+            setmenuFlag(!menuFlag);
+          }}>
+        <Hamburger hideOutline={false} size={20} color="#0E8AC3" toggled={menuFlag}  />
         <div
           className={`HeaderMenu_ActualPage_Title`}
-          onClick={() => {
-            setmenuFlag(!menuFlag);
-          }}
           style={menuFlag ? {color: "#0e8ac3"} : {color: "#000000"}}
         >
           {actualPage}
