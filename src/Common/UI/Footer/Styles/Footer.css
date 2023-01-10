@@ -129,10 +129,13 @@
   }
   .FooterGeneral_Logo_Pictures img{
     background-size: cover;
+    object-fit: cover;
   }
   .FooterGeneral_Logo_Pictures a{
     height: 30%;
     display: flex;
     justify-content: flex-start;
+    background-size: cover;
+    object-fit: cover;
   }
 }
