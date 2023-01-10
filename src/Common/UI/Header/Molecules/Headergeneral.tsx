@@ -39,6 +39,7 @@ export const HeaderGeneral = () => {
   HeaderNavArrayCenter.push(
     { link: "/Home", class: "HeaderNav_Elem", text: "Главная" },
     { link: "/Chat", class: "HeaderNav_Elem", text: "Чат" },
+    { link: "/Search", class: "HeaderNav_Elem", text: "Поиск" },
   );
   return (
     <div className={`HeaderGeneral`}>

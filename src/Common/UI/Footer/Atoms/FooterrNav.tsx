@@ -20,23 +20,36 @@ export const FooterNav = (params: IFooterNav) => {
   return (
     <>
       {params.link == "User" ? (
-        (userAuthorization ? <Link
-          className={`${params.class} FooterNav`}
-          to={`${params.link}/${newuserName}`}
-          key={params.indexlink}
-          style={params.authorization == false ? { display: "none" } : {}}
-        >
-          {params.text}
-        </Link> : null)
+        userAuthorization ? (
+          <Link
+            className={`${params.class} FooterNav`}
+            to={`${params.link}/${newuserName}`}
+            key={params.indexlink}
+            style={params.authorization == false ? { display: "none" } : {}}
+          >
+            {params.text}
+          </Link>
+        ) : null
       ) : params.link == "Login" ? (
-        <Link
-          className={`${params.class} FooterNav`}
-          to={params.link}
-          key={params.indexlink}
-          style={params.authorization == false ? {} : { display: "none" }}
-        >
-          {params.text}
-        </Link>
+        userAuthorization ? null : (
+          <Link
+            className={`${params.class} FooterNav`}
+            to={params.link}
+            key={params.indexlink}
+          >
+            {params.text}
+          </Link>
+        )
+      ) : params.link == "Registration" ? (
+        userAuthorization ? null : (
+          <Link
+            className={`${params.class} FooterNav`}
+            to={params.link}
+            key={params.indexlink}
+          >
+            {params.text}
+          </Link>
+        )
       ) : (
         <Link
           className={`${params.class} FooterNav`}

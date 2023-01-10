@@ -13,7 +13,6 @@ module.exports = (env, argv) => {
 
   const optimizations = {
     splitChunks: {
-      // Чанки для нашего приложения. Все наши npm-пакеты вынесем в отдельный файл с определенным хешем, чтобы клиент каждый раз при изменениях не выкачивал все по-новой
       cacheGroups: {
         vendors: {
           name: "vendors",

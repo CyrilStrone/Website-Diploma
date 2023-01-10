@@ -24,7 +24,8 @@ export const HeaderMenu = () => {
   );
   HeaderNavArrayCenter.push(
     { link: "Home", class: "", text: "Главная" },
-    { link: "Chat", class: "", text: "Чат" }
+    { link: "Chat", class: "", text: "Чат" },
+    { link: "Search", class: "", text: "Поиск" },
   );
   return (
     <>

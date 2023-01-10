@@ -3,34 +3,41 @@ import { Home } from './Home/Ogranoids/home'
 import { User } from './User/Ogranoids/User'
 import { Search } from './Search/Ogranoids/Search'
 import { Chat } from './Chat/Ogranoids/Chat'
-// import { Forgot } from './Forgot/Organoids/Forgot'
-
-// export interface IRoute {
-//     link: string
-//     title: string
-//     component: JSX.Element
-// }
+import { Login } from './Login/Organoids/Login'
+import { Registration } from './Registration/Organoids/Registration'
 
 export const Pages = [
     {
         link: 'Home',
-        title: 'Home',
+        title: 'Главная',
         component: Home,
     },
     {
-        link: 'User',
-        title: 'User',
-        component: User,
-    },
-    {
         link: 'Search',
-        title: 'Search',
+        title: 'Поиск',
         component: Search,
     },
     {
         link: 'Chat',
-        title: 'Chat',
+        title: 'Чат',
         component: Chat,
     },
 ]
 
+export const PagesUser = [
+    {
+        link: 'User',
+        title: 'Пользователь',
+        component: User,
+    },
+    {
+        link: 'Login',
+        title: 'Вход',
+        component: Login,
+    },
+    {
+        link: 'Registration',
+        title: 'Регистрация',
+        component: Registration,
+    },
+]

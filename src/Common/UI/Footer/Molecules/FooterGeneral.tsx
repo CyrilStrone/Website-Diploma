@@ -1,24 +1,21 @@
 import React from "react";
 
 // import {  Footerlogo, IFooterlogo } from "../Atoms/FooterLogo";
-import { Pages } from "../../../../Pages/Routes";
+import { Pages, PagesUser } from "../../../../Pages/Routes";
 import { $userAuthorization } from "../../../hooks";
 import { useStore } from "effector-react";
 // import ikit from '../../../Assets/Search/ikit.jpg';
 // import logo from '../../../Assets/Logo/LogoBig.svg';
+import logo from "../../../Assets/Logo/LogoMin.jpg";
 
 import { FooterNav, IFooterNav } from "../Atoms/FooterrNav";
-import fc from "../../../Assets/Footer/fc.svg";
-import inn from "../../../Assets/Footer/in.svg";
+import { Link } from "react-router-dom";
 
 export const FooterGeneral = () => {
   const userAuthorization = useStore($userAuthorization);
 
-  // const FooterlogoArray:IFooterlogo[]=[
-  //     {link:"/Home",indexlink:"0",class:"Footerlogo_Elem",img:logo},
-  // ]
-
   let FooterNavArray: IFooterNav[] = [];
+  let FooterNavUserArray: IFooterNav[] = [];
 
   Pages.map((page: any, index: any) => [
     FooterNavArray.push({
@@ -29,15 +26,31 @@ export const FooterGeneral = () => {
       text: page.title,
     }),
   ]);
+  PagesUser.map((page: any, index: any) => [
+    FooterNavUserArray.push({
+      link: page.link,
+      indexlink: index,
+      class: "HeaderNav_Elem",
+      authorization: userAuthorization,
+      text: page.title,
+    }),
+  ]);
 
   return (
     <div className={`FooterGeneral`}>
-      {/* <div className={`FooterGeneral_Logo`}>
-                {FooterlogoArray.map((e,i)=><Footerlogo link={e.link}
-                    indexlink={e.indexlink} class={e.class} img={e.img} 
-                />)}
-             </div> */}
-
+      <div className={`FooterGeneral_Logo`}>
+        <Link to={`Home`} className={`FooterGeneral_Logo_Title_Style-BLue`}>
+          Business
+        </Link>
+        <Link to={`Home`} className={`FooterGeneral_Logo_Title_Style-Black`}>
+          Roulette
+        </Link>
+      </div>
+      <div className={`FooterGeneral_Logo_Pictures`}>
+        <Link to={`Home`} className={`FooterGeneral_Logo_Pictures_img`}>
+          <img src={logo} alt="" />
+        </Link>
+      </div>
       <div className={`FooterGeneral_Navs`}>
         {FooterNavArray.map((e, i) => (
           <FooterNav
@@ -49,27 +62,21 @@ export const FooterGeneral = () => {
           />
         ))}
       </div>
-      <div className={`FooterGeneral_Line`}>
-        
+      <div className={`FooterGeneral_User_Navs`}>
+        {FooterNavUserArray.map((e, i) => (
+          <FooterNav
+            link={e.link}
+            indexlink={e.indexlink}
+            class={e.class}
+            authorization={e.authorization}
+            text={e.text}
+          />
+        ))}
       </div>
-      <div className={`FooterGeneral_About`}>
-        <div className={`FooterGeneral_About_Contacts`}>
-            <div>
-                Email: cyrilstrone@gmail.com
-            </div>
-            <div>
-            Phone: +79504291970
-
-            </div>
-        </div>
-        <div className={`FooterGeneral_About_Right`}>
-        © 2022 Фуфелшмертц Пакость Инкорпорейтед. Все права под контролем. 
-        </div>
-        <div className={`FooterGeneral_About_Social`}>
-        <img src={fc} alt="fc" />
-        <img src={inn} alt="in" />
-
-        </div>
+      <div className="FooterGeneral_About">
+        <div className="FooterGeneral_About_mail">business@roulette.com</div>
+        <div className="FooterGeneral_About_mail">business@roulette.ru</div>
+        <div className="FooterGeneral_About_phone">+79504291970</div>
       </div>
     </div>
   );
